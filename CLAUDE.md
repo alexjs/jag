@@ -20,8 +20,11 @@ inspect them for the above and flag rather than commit if in doubt.
 
 ## Q&A corpus (local-only, in `private/reference/`)
 
-When answering questions about the car, search these before reaching for the
-web — they are the authoritative corpus:
+For ANY question about the car — diagnosis, how-to, specs, history — ALWAYS
+grep this corpus before answering from general knowledge or the web, even if
+you think you know the answer. Translate symptoms into multiple search probes
+(synonyms, related components, UK/US terms: boot/trunk, earth/ground, hood/
+bonnet) and iterate if the first probe misses. Cite page numbers in answers.
 
 - `private/reference/xjs-help.txt` — full text of Kirby Palm, *Experience in a
   Book* (final-for-us 2009 revision; the author has died, treat as static).
