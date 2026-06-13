@@ -27,3 +27,15 @@ if [[ ! -f "$ref/XJS_help.pdf" ]]; then
 fi
 pdftotext -layout "$ref/XJS_help.pdf" "$ref/xjs-help.txt"
 echo "xjs-help.txt rebuilt"
+
+# 3. Diagnostic sound recordings (catalog: docs/sounds.md). Local mirror only —
+#    the site asks that these not be re-hosted.
+mkdir -p "$ref/sounds"
+for f in bad_ignition_amp coolant_temp_disconnected marginal_ignition_amp \
+         throttle_stumble chuffed_starter; do
+  [[ -f "$ref/sounds/$f.mp3" ]] || \
+    curl -fsS --max-time 30 -o "$ref/sounds/$f.mp3" \
+      "http://jaguar.professional.org/sounds/$f.mp3" || \
+    echo "warning: could not fetch $f.mp3" >&2
+done
+echo "sounds mirrored"

@@ -38,9 +38,21 @@ bonnet) and iterate if the first probe misses. Cite page numbers in answers.
   and read the image for actual values. Section map: `docs/manual/index.md`.
   For HE-specific data prefer the supplement (PDF pages 314–388).
 
-If `private/reference/` is missing or empty (fresh clone), rebuild it with
-`scripts/build-corpus.sh` before answering — do not silently fall back to
-general knowledge.
+- `private/reference/sounds/*.mp3` — diagnostic recordings from a 1985 XJ-S
+  (catalog with symptom descriptions: `docs/sounds.md`). When Alex describes a
+  noise or a failure-to-start, check the catalog and give him the matching
+  file/URL to listen to.
+
+Helpers: `scripts/manual-page.sh <page> [last] [dpi]` renders manual pages to
+PNG for viewing. If `private/reference/` is missing or empty (fresh clone),
+rebuild it with `scripts/build-corpus.sh` before answering — do not silently
+fall back to general knowledge. On machines with `qmd` (e.g. delphi), corpus
+files may additionally be indexed for semantic search, but grep + form-feed
+page citation remains the canonical method.
+
+When a debugging session reaches a conclusion, record it in
+`maintenance/troubleshooting.md` (symptom → checks → cause → fix), with
+corpus citations — this log is the repo's compounding value.
 
 These are local-only (gitignored): the Palm book is copyrighted and must not
 be committed or quoted at length in public repo files — paraphrase and cite
