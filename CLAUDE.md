@@ -38,6 +38,10 @@ bonnet) and iterate if the first probe misses. Cite page numbers in answers.
   and read the image for actual values. Section map: `docs/manual/index.md`.
   For HE-specific data prefer the supplement (PDF pages 314–388).
 
+If `private/reference/` is missing or empty (fresh clone), rebuild it with
+`scripts/build-corpus.sh` before answering — do not silently fall back to
+general knowledge.
+
 These are local-only (gitignored): the Palm book is copyrighted and must not
 be committed or quoted at length in public repo files — paraphrase and cite
 ("Palm, Experience in a Book, p. N").

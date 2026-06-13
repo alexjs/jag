@@ -11,7 +11,7 @@ pushed. Put sensitive material here:
 
 `reference/` holds local-only Q&A corpus material — currently the Kirby Palm
 book (PDF + extracted text; copyrighted, never commit) and the factory
-manual's OCR text (regenerable via `ocrmypdf --redo-ocr --sidecar`).
+manual's OCR text. Rebuild everything with `scripts/build-corpus.sh`.
 
 When something here has shareable technical content (e.g. an invoice that
 documents what work was done), transcribe the technical facts into
