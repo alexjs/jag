@@ -9,6 +9,10 @@ pushed. Put sensitive material here:
 - Invoices and receipts (they carry names, addresses, plate numbers)
 - Anything with personal or identifying information
 
+`reference/` holds local-only Q&A corpus material — currently the Kirby Palm
+book (PDF + extracted text; copyrighted, never commit) and the factory
+manual's OCR text (regenerable via `ocrmypdf --redo-ocr --sidecar`).
+
 When something here has shareable technical content (e.g. an invoice that
 documents what work was done), transcribe the technical facts into
 `maintenance/log.md` with the identifying details stripped.

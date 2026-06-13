@@ -18,6 +18,27 @@ into `maintenance/log.md` with identifying details stripped.
 Before any commit that adds files supplied by the user (scans, photos, PDFs),
 inspect them for the above and flag rather than commit if in doubt.
 
+## Q&A corpus (local-only, in `private/reference/`)
+
+When answering questions about the car, search these before reaching for the
+web — they are the authoritative corpus:
+
+- `private/reference/xjs-help.txt` — full text of Kirby Palm, *Experience in a
+  Book* (final-for-us 2009 revision; the author has died, treat as static).
+  Page breaks are form feeds, so a match's page number = count of `\f` before
+  it + 1. The PDF is alongside as `XJS_help.pdf`. Owner experience, fixes,
+  mods — complementary to the factory manual.
+- `private/reference/manual-ocr.txt` — OCR sidecar of the factory Repair
+  Operation Manual + HE Supplement (same page split convention; page N here =
+  PDF page N of `docs/manual/xj-s-he-repair-manual.pdf`). OCR is rough: use it
+  to *locate* pages, then render the PDF page (`pdftoppm -png -r 150 -f N -l N`)
+  and read the image for actual values. Section map: `docs/manual/index.md`.
+  For HE-specific data prefer the supplement (PDF pages 314–388).
+
+These are local-only (gitignored): the Palm book is copyrighted and must not
+be committed or quoted at length in public repo files — paraphrase and cite
+("Palm, Experience in a Book, p. N").
+
 ## Conventions
 
 - Maintenance entries: newest first in `maintenance/log.md`, using the template there
