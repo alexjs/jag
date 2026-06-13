@@ -1,0 +1,7 @@
+# Local-only: sensitive documents (VIN, plate, insurance, invoices, ownership)
+private/*
+!private/README.md
+
+# OS noise
+.DS_Store
+Thumbs.db
