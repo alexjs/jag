@@ -1,5 +1,12 @@
 # Parts
 
+## Spares on hand
+
+[`spares.csv`](spares.csv) — inventory of spare parts currently held
+(migrated from Notion, 2026-06). GitHub renders it as a sortable table.
+
+## Cross-references and suppliers
+
 Cross-references, part numbers, and supplier experience. Useful fields per
 entry: Jaguar part number, common cross-reference (many XJS parts are GM,
 Lucas, or generic items at a tenth of the "Jaguar" price), supplier, shipping
